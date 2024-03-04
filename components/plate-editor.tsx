@@ -154,6 +154,7 @@ import { withDraggables } from "@/components/plate-ui/with-draggables";
 import { EmojiCombobox } from "@/components/plate-ui/emoji-combobox";
 import { useState } from "react";
 import { Button } from "./plate-ui/button";
+import { saveContent } from "@/lib/actions";
 
 const plugins = createPlugins(
   [
@@ -368,6 +369,7 @@ export default function PlateEditor() {
 
   function saveEditorContent() {
     console.log(content);
+    saveContent(content);
   }
 
   return (
