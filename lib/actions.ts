@@ -16,7 +16,7 @@ export async function saveContent(content: Content) {
 
     await prisma.content.upsert({
       create: { id: "1", content: constStr },
-      update: { content: "constStr" },
+      update: { content: constStr },
       where: { id: "1" },
     });
   } catch (e) {
