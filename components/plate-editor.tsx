@@ -153,6 +153,7 @@ import { withPlaceholders } from "@/components/plate-ui/placeholder";
 import { withDraggables } from "@/components/plate-ui/with-draggables";
 import { EmojiCombobox } from "@/components/plate-ui/emoji-combobox";
 import { useState } from "react";
+import { Button } from "./plate-ui/button";
 
 const plugins = createPlugins(
   [
@@ -364,29 +365,36 @@ const initialValue = [
 
 export default function PlateEditor() {
   const [content, setContent] = useState(initialValue);
-  console.log(content);
+
+  function saveEditorContent() {
+    console.log(content);
+  }
 
   return (
-    <DndProvider backend={HTML5Backend}>
-      <CommentsProvider users={{}} myUserId="1">
-        <Plate
-          onChange={(value) => setContent(value)}
-          plugins={plugins}
-          initialValue={initialValue}
-        >
-          <FixedToolbar className="border mb-2">
-            <FixedToolbarButtons />
-          </FixedToolbar>
+    <section className="space-y-4">
+      <DndProvider backend={HTML5Backend}>
+        <CommentsProvider users={{}} myUserId="1">
+          <Plate
+            onChange={(value) => setContent(value)}
+            plugins={plugins}
+            initialValue={initialValue}
+          >
+            <FixedToolbar className="border mb-2">
+              <FixedToolbarButtons />
+            </FixedToolbar>
 
-          <Editor className="px-10" />
+            <Editor className="px-10" />
 
-          {/* <FloatingToolbar>
+            {/* <FloatingToolbar>
               <FloatingToolbarButtons />
             </FloatingToolbar> */}
-          <MentionCombobox items={[]} />
-          <CommentsPopover />
-        </Plate>
-      </CommentsProvider>
-    </DndProvider>
+            <MentionCombobox items={[]} />
+            <CommentsPopover />
+          </Plate>
+        </CommentsProvider>
+      </DndProvider>
+
+      <Button onClick={() => saveEditorContent()}>save</Button>
+    </section>
   );
 }
