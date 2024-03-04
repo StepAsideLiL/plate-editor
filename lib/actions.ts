@@ -26,3 +26,16 @@ export async function saveContent(content: Content) {
     throw new Error("Failed to save.");
   }
 }
+
+export async function getContent() {
+  try {
+    const contentAll = await prisma.content.findUnique({ where: { id: "1" } });
+
+    const content: Content = JSON.parse(contentAll?.content || "");
+
+    return content;
+  } catch (e) {
+    console.log(e);
+    throw new Error("Failed fetch content.");
+  }
+}
