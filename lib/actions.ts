@@ -2,7 +2,7 @@
 
 import prisma from "@/lib/prismadb";
 
-type Content =
+export type Content =
   | {
       id: string;
       type: string;
