@@ -9,7 +9,7 @@ export default function ReadOnlyContent({ content }: { content: Content }) {
     <section>
       {content && (
         <Plate value={content} readOnly>
-          <Editor />
+          <Editor className="border-none" />
         </Plate>
       )}
     </section>
