@@ -62,6 +62,9 @@ dependencies:
   '@udecode/plate-comments':
     specifier: ^30.5.3
     version: 30.5.3(@udecode/plate-common@30.4.5)(react-dom@18.2.0)(react@18.2.0)(slate-history@0.100.0)(slate-hyperscript@0.100.0)(slate-react@0.102.0)(slate@0.102.0)
+  '@udecode/plate-common':
+    specifier: ^30.4.5
+    version: 30.4.5(@types/react@18.2.61)(react-dom@18.2.0)(react@18.2.0)(scheduler@0.23.0)(slate-history@0.100.0)(slate-hyperscript@0.100.0)(slate-react@0.102.0)(slate@0.102.0)
   '@udecode/plate-dnd':
     specifier: ^30.5.3
     version: 30.5.3(@udecode/plate-common@30.4.5)(react-dnd-html5-backend@16.0.1)(react-dnd@16.0.1)(react-dom@18.2.0)(react@18.2.0)(slate-history@0.100.0)(slate-hyperscript@0.100.0)(slate-react@0.102.0)(slate@0.102.0)
