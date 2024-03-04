@@ -191,6 +191,9 @@ dependencies:
   react-tweet:
     specifier: ^3.2.0
     version: 3.2.0(react-dom@18.2.0)(react@18.2.0)
+  slate-react:
+    specifier: ^0.102.0
+    version: 0.102.0(react-dom@18.2.0)(react@18.2.0)(slate@0.102.0)
   tailwind-merge:
     specifier: ^2.2.1
     version: 2.2.1
