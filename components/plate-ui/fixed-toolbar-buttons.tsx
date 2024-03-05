@@ -23,6 +23,12 @@ import { LineHeightDropdownMenu } from "./line-height-dropdown-menu";
 import { IndentListToolbarButton } from "./indent-list-toolbar-button";
 import { OutdentToolbarButton } from "./outdent-toolbar-button";
 import { IndentToolbarButton } from "./indent-toolbar-button";
+import { MoreDropdownMenu } from "./more-dropdown-menu";
+import { ELEMENT_IMAGE } from "@udecode/plate-media";
+import { LinkToolbarButton } from "./link-toolbar-button";
+import { MediaToolbarButton } from "./media-toolbar-button";
+import { TableDropdownMenu } from "./table-dropdown-menu";
+import { EmojiDropdownMenu } from "./emoji-dropdown-menu";
 
 export function FixedToolbarButtons() {
   const readOnly = useEditorReadOnly();
@@ -89,6 +95,18 @@ export function FixedToolbarButtons() {
 
               <OutdentToolbarButton />
               <IndentToolbarButton />
+            </ToolbarGroup>
+
+            <ToolbarGroup>
+              <LinkToolbarButton />
+
+              <MediaToolbarButton nodeType={ELEMENT_IMAGE} />
+
+              <TableDropdownMenu />
+
+              <EmojiDropdownMenu />
+
+              <MoreDropdownMenu />
             </ToolbarGroup>
           </>
         )}
