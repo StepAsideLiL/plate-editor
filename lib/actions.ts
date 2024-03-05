@@ -1,6 +1,7 @@
 "use server";
 
 import prisma from "@/lib/prismadb";
+import { revalidatePath } from "next/cache";
 
 export type Content = {
   id: string;
@@ -23,6 +24,8 @@ export async function saveContent(content: Content) {
     console.log(e);
     throw new Error("Failed to save.");
   }
+
+  revalidatePath("/", "layout");
 }
 
 export async function getContent() {
