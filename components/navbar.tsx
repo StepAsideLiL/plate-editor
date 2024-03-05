@@ -21,16 +21,6 @@ export default function Navbar() {
         </Link>
 
         <Link
-          href={"/render-html"}
-          className={cn(
-            "hover:underline",
-            pathname === "/render-html" && "text-foreground underline"
-          )}
-        >
-          Render Html
-        </Link>
-
-        <Link
           href={"/editor"}
           className={cn(
             "hover:underline",
