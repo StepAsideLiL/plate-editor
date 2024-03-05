@@ -17,6 +17,12 @@ import { ToolbarGroup } from "./toolbar";
 import { TurnIntoDropdownMenu } from "./turn-into-dropdown-menu";
 import { MARK_BG_COLOR, MARK_COLOR } from "@udecode/plate-font";
 import { ColorDropdownMenu } from "./color-dropdown-menu";
+import { ListStyleType } from "@udecode/plate-indent-list";
+import { AlignDropdownMenu } from "./align-dropdown-menu";
+import { LineHeightDropdownMenu } from "./line-height-dropdown-menu";
+import { IndentListToolbarButton } from "./indent-list-toolbar-button";
+import { OutdentToolbarButton } from "./outdent-toolbar-button";
+import { IndentToolbarButton } from "./indent-toolbar-button";
 
 export function FixedToolbarButtons() {
   const readOnly = useEditorReadOnly();
@@ -71,6 +77,18 @@ export function FixedToolbarButtons() {
               >
                 <Icons.bg className={iconVariants({ variant: "toolbar" })} />
               </ColorDropdownMenu>
+            </ToolbarGroup>
+
+            <ToolbarGroup>
+              <AlignDropdownMenu />
+
+              <LineHeightDropdownMenu />
+
+              <IndentListToolbarButton nodeType={ListStyleType.Disc} />
+              <IndentListToolbarButton nodeType={ListStyleType.Decimal} />
+
+              <OutdentToolbarButton />
+              <IndentToolbarButton />
             </ToolbarGroup>
           </>
         )}
