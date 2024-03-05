@@ -3,6 +3,7 @@
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { ModeToggle } from "./mode-toggle";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -29,6 +30,8 @@ export default function Navbar() {
         >
           Editor
         </Link>
+
+        <ModeToggle />
       </nav>
     </header>
   );
