@@ -151,9 +151,7 @@ export const plugins = createPlugins(
     createMediaEmbedPlugin(),
     createCaptionPlugin({
       options: {
-        pluginKeys: [
-          // ELEMENT_IMAGE, ELEMENT_MEDIA_EMBED
-        ],
+        pluginKeys: [ELEMENT_IMAGE, ELEMENT_MEDIA_EMBED],
       },
     }),
     createMentionPlugin(),
