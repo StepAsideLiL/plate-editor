@@ -16,7 +16,7 @@ export default async function Page() {
         ];
 
   return (
-    <main className="container">
+    <main className="container pb-40">
       <PlateEditor initialValue={initialValue} />
     </main>
   );
