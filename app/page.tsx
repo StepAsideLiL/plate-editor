@@ -4,7 +4,7 @@ import { getContent } from "@/lib/actions";
 import Link from "next/link";
 
 export default async function Page() {
-  const content = await getContent();
+  const content = await getContent("1");
 
   return (
     <main className="container">
