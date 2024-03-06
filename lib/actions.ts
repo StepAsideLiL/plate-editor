@@ -11,14 +11,14 @@ export type Content = {
   }[];
 }[];
 
-export async function saveContent(content: Content) {
+export async function saveContent(id: string, content: Content) {
   try {
     const constStr = JSON.stringify(content);
 
     await prisma.content.upsert({
-      create: { id: "1", content: constStr },
+      create: { id: id, content: constStr },
       update: { content: constStr },
-      where: { id: "1" },
+      where: { id: id },
     });
   } catch (e) {
     console.log(e);
@@ -28,9 +28,9 @@ export async function saveContent(content: Content) {
   revalidatePath("/", "layout");
 }
 
-export async function getContent() {
+export async function getContent(id: string) {
   try {
-    const contentAll = await prisma.content.findUnique({ where: { id: "1" } });
+    const contentAll = await prisma.content.findUnique({ where: { id: id } });
 
     const content: Content = contentAll?.content
       ? JSON.parse(contentAll?.content)
