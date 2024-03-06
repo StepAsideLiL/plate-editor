@@ -25,7 +25,7 @@ export default function PlateEditor({
 
   function saveEditorContent() {
     console.log(content);
-    saveContent(content);
+    saveContent("1", content);
   }
 
   return (
