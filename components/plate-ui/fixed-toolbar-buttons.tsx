@@ -24,11 +24,12 @@ import { IndentListToolbarButton } from "./indent-list-toolbar-button";
 import { OutdentToolbarButton } from "./outdent-toolbar-button";
 import { IndentToolbarButton } from "./indent-toolbar-button";
 import { MoreDropdownMenu } from "./more-dropdown-menu";
-import { ELEMENT_IMAGE } from "@udecode/plate-media";
+import { ELEMENT_IMAGE, ELEMENT_MEDIA_EMBED } from "@udecode/plate-media";
 import { LinkToolbarButton } from "./link-toolbar-button";
 import { MediaToolbarButton } from "./media-toolbar-button";
 import { TableDropdownMenu } from "./table-dropdown-menu";
 import { EmojiDropdownMenu } from "./emoji-dropdown-menu";
+import { ELEMENT_CODE_BLOCK } from "@udecode/plate-code-block";
 
 export function FixedToolbarButtons() {
   const readOnly = useEditorReadOnly();
@@ -71,6 +72,12 @@ export function FixedToolbarButtons() {
               <MarkToolbarButton tooltip="Code (⌘+E)" nodeType={MARK_CODE}>
                 <Icons.code />
               </MarkToolbarButton>
+              <MarkToolbarButton
+                tooltip="Code (⌘+E)"
+                nodeType={ELEMENT_CODE_BLOCK}
+              >
+                <Icons.code />
+              </MarkToolbarButton>
             </ToolbarGroup>
 
             <ToolbarGroup>
@@ -101,6 +108,7 @@ export function FixedToolbarButtons() {
               <LinkToolbarButton />
 
               <MediaToolbarButton nodeType={ELEMENT_IMAGE} />
+              <MediaToolbarButton nodeType={ELEMENT_MEDIA_EMBED} />
 
               <TableDropdownMenu />
 
