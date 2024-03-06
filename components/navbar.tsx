@@ -31,6 +31,16 @@ export default function Navbar() {
           Editor
         </Link>
 
+        <Link
+          href={"/editor-v1"}
+          className={cn(
+            "hover:underline",
+            pathname === "/editor-v1" && "text-foreground underline"
+          )}
+        >
+          Editor V1
+        </Link>
+
         <ModeToggle />
       </nav>
     </header>
