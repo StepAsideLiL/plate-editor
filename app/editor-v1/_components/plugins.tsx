@@ -1,5 +1,5 @@
 import { withProps } from "@udecode/cn";
-import { createPlugins } from "@udecode/plate-common";
+import { createPlugins, RenderAfterEditable } from "@udecode/plate-common";
 import {
   createParagraphPlugin,
   ELEMENT_PARAGRAPH,
@@ -18,6 +18,8 @@ import { HeadingElement } from "@/components/plate-ui/heading-element";
 import { ParagraphElement } from "@/components/plate-ui/paragraph-element";
 import { withPlaceholders } from "@/components/plate-ui/placeholder";
 import { withDraggables } from "@/components/plate-ui/with-draggables";
+import { createLinkPlugin } from "@udecode/plate-link";
+import { LinkFloatingToolbar } from "@/components/plate-ui/link-floating-toolbar";
 
 export const plugins = createPlugins(
   [
@@ -25,6 +27,9 @@ export const plugins = createPlugins(
     createHeadingPlugin(),
     createDndPlugin({
       options: { enableScroller: true },
+    }),
+    createLinkPlugin({
+      renderAfterEditable: LinkFloatingToolbar as RenderAfterEditable,
     }),
   ],
   {
