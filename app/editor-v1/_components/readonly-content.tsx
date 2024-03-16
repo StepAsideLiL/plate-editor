@@ -1,8 +1,7 @@
 "use client";
 
 import { Content } from "@/lib/actions";
-import { Plate } from "@udecode/plate-common";
-import { Editor } from "@/components/plate-ui/editor";
+import { Plate, PlateContent } from "@udecode/plate-common";
 import { plugins } from "./plugins";
 
 export default function ReadOnlyContent({ content }: { content: Content }) {
@@ -10,7 +9,7 @@ export default function ReadOnlyContent({ content }: { content: Content }) {
     <section>
       {content && (
         <Plate plugins={plugins} value={content} readOnly>
-          <Editor className="border-none" readOnly />
+          <PlateContent readOnly />
         </Plate>
       )}
     </section>
