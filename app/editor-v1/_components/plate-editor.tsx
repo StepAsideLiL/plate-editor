@@ -5,13 +5,13 @@ import { Plate } from "@udecode/plate-common";
 import { useState } from "react";
 import { DndProvider } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
-import { FixedToolbar } from "@/components/plate-ui/fixed-toolbar";
-import { FixedToolbarButtons } from "@/components/plate-ui/fixed-toolbar-buttons";
-import { Editor } from "@/components/plate-ui/editor";
-import { Button } from "@/components/plate-ui/button";
 import { plugins } from "./plugins";
-import { FloatingToolbar } from "@/components/plate-ui/floating-toolbar";
-import { FloatingToolbarButtons } from "@/components/plate-ui/floating-toolbar-buttons";
+import { Editor } from "./plate-ui/editor";
+import { Button } from "./plate-ui/button";
+import { FixedToolbarButtons } from "./plate-ui/fixed-toolbar-buttons";
+import { FixedToolbar } from "./plate-ui/fixed-toolbar";
+import { FloatingToolbar } from "./plate-ui/floating-toolbar";
+import { FloatingToolbarButtons } from "./plate-ui/floating-toolbar-buttons";
 
 export default function PlateEditor({
   initialValue,
