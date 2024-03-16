@@ -36,7 +36,7 @@ export default function PlateEditor({
             <InsertDropdownMenu />
           </FixedToolbar>
 
-          <Editor className="px-10" />
+          <Editor className="px-10" variant={"ghost"} focusRing={false} />
 
           <FloatingToolbar>
             <FloatingToolbarButtons />
